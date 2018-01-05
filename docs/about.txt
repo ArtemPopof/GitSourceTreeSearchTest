@@ -1,0 +1,5 @@
+The idea of git tree search tool is very complicated and no one, including developers don't know what should it do, but there are some test-failing-prediction mechanism involved.
+
+If you want more info about how it works and why should we waste our time to create such a dumb thing, mail us.
+
+P.S if you want to make a donation, please send some money to Alexey Navalny compaign, visit navalny.com for more info.
