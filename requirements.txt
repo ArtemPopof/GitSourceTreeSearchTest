@@ -1,2 +1,0 @@
-neo4j-driver==1.5.* 
-pygit2==0.26.* 
