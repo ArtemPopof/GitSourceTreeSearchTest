@@ -1,17 +1,18 @@
-from context import util
-import unittest
+from unittest import TestCase
+
+from util import Pair
 
 
-class TestUtilClasses(unittest.TestCase):
-
+class TestUtilClasses(TestCase):
     def test_pair_initialization(self):
         pair = Pair(50, -30)
-        self.assertEquals(pair.first, 50)
-        self.assertEquals(pair.second, -30)
+
+        self.assertEqual(pair.first, 50)
+        self.assertEqual(pair.second, -30)
 
     def test_pair_swap(self):
         pair = Pair(20, 100)
         pair.swap()
-        self.assertEquals(pair.first, 100)
-        self.assertEquals(pair.second, 20)
 
+        self.assertEqual(pair.first, 100)
+        self.assertEqual(pair.second, 20)

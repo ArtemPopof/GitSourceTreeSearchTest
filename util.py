@@ -1,8 +1,9 @@
-# some util classes
+"""Some util classes"""
+
+from math import sqrt
 
 
 class Point:
-
     def __init__(self, x, y):
         self.x = x
         self.y = y
@@ -12,7 +13,6 @@ class Point:
 
 
 class Pair:
-
     def __init__(self, first, second):
         self.first = first
         self.second = second

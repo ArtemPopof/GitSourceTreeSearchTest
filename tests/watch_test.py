@@ -1,26 +1,27 @@
-from .context import watch
 import unittest
 
-class TestWatchClass(unittest.TestCase):
+from watch import Watch
 
+
+class TestWatchClass(unittest.TestCase):
     def test_corrent_printing(self):
-        self.assertEqual(Watch().printTime(), '0:0:0')
+        self.assertEqual(Watch().current_time(), '0:0:0')
 
     def should_fails_when_invalid_minute_set(self):
-        Watch().setMinutes(66)
+        self.assertRaises(Watch().set_minutes(66), RuntimeError)
 
     def should_fails_when_invalid_seconds_set(self):
-        Watch().setSeconds(555)
+        self.assertRaises(Watch().set_seconds(555), RuntimeError)
 
     def should_fails_when_invalid_hours_set(self):
-        Watch().setHours(24)
-        Watch().setHours(26)
+        self.assertRaises(Watch().set_hours(24), RuntimeError)
+        self.assertRaises(Watch().set_hours(26), RuntimeError)
 
-    def should_print_correct_time(self):
+    def test_print_time(self):
         watches = Watch()
-        watches.setSeconds(50)
-        watches.setMinutes(5)
-        watches.setHours(20)
-        self.assertEqual(watches.printTime(), '20:5:50')
 
-        
+        watches.set_seconds(50)
+        watches.set_minutes(5)
+        watches.set_hours(20)
+
+        self.assertEqual(watches.current_time(), '20:5:50')
